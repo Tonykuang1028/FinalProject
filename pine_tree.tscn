@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://trees/pine_tree.png" id="2_2t6et"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s60ee"]
-radius = 21.0238
+radius = 20.0
 
 [node name="PineTree" type="StaticBody2D"]
 
@@ -17,5 +17,5 @@ texture = ExtResource("1_8lycu")
 texture = ExtResource("2_2t6et")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 59)
+position = Vector2(1, 65)
 shape = SubResource("CircleShape2D_s60ee")
