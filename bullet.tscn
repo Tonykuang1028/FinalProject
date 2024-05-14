@@ -7,6 +7,7 @@
 radius = 15.0
 
 [node name="Bullet" type="Area2D"]
+rotation = 0.793183
 collision_layer = 0
 collision_mask = 3
 script = ExtResource("1_8trhr")
