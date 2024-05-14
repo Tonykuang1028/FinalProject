@@ -16,7 +16,7 @@ offset_right = 1920.0
 offset_bottom = 1084.0
 
 [node name="Player" parent="." instance=ExtResource("1_so1bh")]
-position = Vector2(282, 375)
+position = Vector2(956, 543)
 
 [node name="Mob" parent="." instance=ExtResource("2_k572u")]
 position = Vector2(630, 496)
