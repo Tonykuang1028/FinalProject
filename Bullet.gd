@@ -13,3 +13,7 @@ func _physics_process(delta):
 	if travelled_distance > RANGE :
 		queue_free()
 	
+
+
+func _on_body_entered(body):
+	pass # Replace with function body.
