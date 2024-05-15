@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://btn6rqffudpog"]
+[gd_scene load_steps=5 format=3 uid="uid://btn6rqffudpog"]
 
 [ext_resource type="PackedScene" uid="uid://be2yma1l3fq8" path="res://player.tscn" id="1_so1bh"]
 [ext_resource type="PackedScene" uid="uid://bkt56macggrho" path="res://pine_tree.tscn" id="2_i21pu"]
 [ext_resource type="PackedScene" uid="uid://qdvxicsbgug" path="res://mob.tscn" id="2_k572u"]
+
+[sub_resource type="Curve2D" id="Curve2D_wj5uv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -123, -104, 0, 0, 0, 0, 2086, -102, 0, 0, 0, 0, 2074, 1187, 0, 0, 0, 0, -121, 1207, 0, 0, 0, 0, -105, -93, 0, 0, 0, 0, 2092, -105)
+}
+point_count = 6
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
@@ -50,3 +56,6 @@ position = Vector2(1675, 612)
 
 [node name="Mob5" parent="." instance=ExtResource("2_k572u")]
 position = Vector2(1312, 655)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_wj5uv")
