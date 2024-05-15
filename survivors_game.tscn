@@ -25,6 +25,15 @@ offset_bottom = 1084.0
 [node name="Player" parent="." instance=ExtResource("1_so1bh")]
 position = Vector2(956, 543)
 
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-956, -543)
+curve = SubResource("Curve2D_wj5uv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-123, -104)
+rotation = 0.000905387
+
 [node name="PineTree" parent="." instance=ExtResource("2_i21pu")]
 position = Vector2(240, 777)
 
@@ -43,10 +52,8 @@ position = Vector2(214, 391)
 [node name="PineTree5" parent="." instance=ExtResource("2_i21pu")]
 position = Vector2(985, 203)
 
-[node name="Path2D" type="Path2D" parent="."]
-curve = SubResource("Curve2D_wj5uv")
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.08
+autostart = true
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-unique_name_in_owner = true
-position = Vector2(-123, -104)
-rotation = 0.000905387
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
