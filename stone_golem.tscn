@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=15 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
@@ -28,6 +28,18 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Label2:self_modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="Animation" id="Animation_4hiq8"]
@@ -183,11 +195,28 @@ tracks/0/keys = {
 "values": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
 }
 
+[sub_resource type="Animation" id="Animation_kwjle"]
+resource_name = "boss_slained"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/Label2:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yjevo"]
 _data = {
 "RESET": SubResource("Animation_igvx2"),
 "armor_buff": SubResource("Animation_i0eux"),
 "block": SubResource("Animation_v46vj"),
+"boss_slained": SubResource("Animation_kwjle"),
 "death": SubResource("Animation_gu642"),
 "glowing": SubResource("Animation_ls2ql"),
 "idle": SubResource("Animation_r4sf1"),
@@ -222,6 +251,7 @@ autoplay = "idle"
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="UI"]
+visible = false
 custom_minimum_size = Vector2(800, 100)
 anchors_preset = 7
 anchor_left = 0.5
@@ -245,6 +275,7 @@ theme_override_font_sizes/font_size = 30
 text = "STONE GOLEM"
 
 [node name="Label2" type="Label" parent="UI"]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
