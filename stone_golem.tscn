@@ -50,6 +50,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_r4sf1"]
 resource_name = "idle"
 length = 0.500013
+loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -116,6 +117,7 @@ tracks/0/keys = {
 [sub_resource type="Animation" id="Animation_0mhj4"]
 resource_name = "meele_attack"
 length = 0.875013
+loop_mode = 1
 step = 0.125
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -214,3 +216,4 @@ vframes = 15
 libraries = {
 "": SubResource("AnimationLibrary_yjevo")
 }
+autoplay = "idle"
