@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=16 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
@@ -226,7 +226,11 @@ _data = {
 "ranged_attack": SubResource("Animation_y34pk")
 }
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a3p07"]
+radius = 13.5864
+height = 48.5227
+
+[node name="Golem" type="CharacterBody2D"]
 scale = Vector2(6.18267, 6.18267)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -289,3 +293,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "BOSS SLAINED"
+
+[node name="Label" type="Label" parent="."]
+offset_left = -11.4837
+offset_top = -44.4792
+offset_right = 28.5163
+offset_bottom = -21.4792
+theme_override_font_sizes/font_size = 8
+text = "Debug"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.64697, -2.58788)
+shape = SubResource("CapsuleShape2D_a3p07")
