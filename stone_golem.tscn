@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=11 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
@@ -113,6 +113,23 @@ tracks/0/keys = {
 "values": [30, 31, 32, 33, 34, 35, 36, 37]
 }
 
+[sub_resource type="Animation" id="Animation_0mhj4"]
+resource_name = "meele_attack"
+length = 0.875013
+step = 0.125
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [40, 41, 42, 43, 44, 45, 46]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_yjevo"]
 _data = {
 "RESET": SubResource("Animation_igvx2"),
@@ -120,6 +137,7 @@ _data = {
 "glowing": SubResource("Animation_ls2ql"),
 "idle": SubResource("Animation_r4sf1"),
 "laser": SubResource("Animation_4hiq8"),
+"meele_attack": SubResource("Animation_0mhj4"),
 "ranged_attack": SubResource("Animation_y34pk")
 }
 
