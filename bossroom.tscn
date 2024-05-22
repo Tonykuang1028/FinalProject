@@ -1,8 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://baipq1drmwplm"]
+[gd_scene load_steps=3 format=3 uid="uid://baipq1drmwplm"]
 
 [ext_resource type="PackedScene" uid="uid://cxy3muh5gu3by" path="res://stone_golem.tscn" id="1_v6hrc"]
+[ext_resource type="PackedScene" uid="uid://be2yma1l3fq8" path="res://player.tscn" id="2_vovpl"]
 
 [node name="bossroom" type="Node2D"]
 
 [node name="Golem" parent="." instance=ExtResource("1_v6hrc")]
 position = Vector2(932, 508)
+
+[node name="Player" parent="." instance=ExtResource("2_vovpl")]
+position = Vector2(293, 309)

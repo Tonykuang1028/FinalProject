@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=21 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
 [ext_resource type="Script" path="res://state.gd" id="3_nieqw"]
 [ext_resource type="Script" path="res://FiniteStateMachine.gd" id="3_t2jh3"]
 [ext_resource type="Script" path="res://Idle.gd" id="4_ho1mk"]
+[ext_resource type="Script" path="res://Follow.gd" id="5_1awkp"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -423,7 +424,7 @@ script = ExtResource("3_t2jh3")
 script = ExtResource("4_ho1mk")
 
 [node name="Follow" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("3_nieqw")
+script = ExtResource("5_1awkp")
 
 [node name="MeeleAttack" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("3_nieqw")
