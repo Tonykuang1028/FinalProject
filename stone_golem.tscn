@@ -1,7 +1,8 @@
-[gd_scene load_steps=17 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=18 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
+[ext_resource type="Script" path="res://state.gd" id="3_nieqw"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -416,17 +417,25 @@ shape = SubResource("CircleShape2D_v6wog")
 [node name="FiniteStateMachine" type="Node2D" parent="."]
 
 [node name="Idle" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="Follow" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="MeeleAttack" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="HomingMissile" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="LaserBeam" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="ArmorBuff" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="Dash" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
+script = ExtResource("3_nieqw")
