@@ -1,8 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=20 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
 [ext_resource type="Script" path="res://state.gd" id="3_nieqw"]
+[ext_resource type="Script" path="res://FiniteStateMachine.gd" id="3_t2jh3"]
+[ext_resource type="Script" path="res://Idle.gd" id="4_ho1mk"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -396,7 +398,7 @@ grow_vertical = 2
 theme_override_font_sizes/font_size = 100
 text = "BOSS SLAINED"
 
-[node name="Label" type="Label" parent="."]
+[node name="debug" type="Label" parent="."]
 offset_left = -11.4837
 offset_top = -44.4792
 offset_right = 28.5163
@@ -415,9 +417,10 @@ collision_layer = 0
 shape = SubResource("CircleShape2D_v6wog")
 
 [node name="FiniteStateMachine" type="Node2D" parent="."]
+script = ExtResource("3_t2jh3")
 
 [node name="Idle" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("3_nieqw")
+script = ExtResource("4_ho1mk")
 
 [node name="Follow" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("3_nieqw")
@@ -439,3 +442,5 @@ script = ExtResource("3_nieqw")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("3_nieqw")
+
+[connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
