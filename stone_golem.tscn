@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=22 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
+[ext_resource type="Script" path="res://stone_golem.gd" id="1_rdybp"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
 [ext_resource type="Script" path="res://state.gd" id="3_nieqw"]
 [ext_resource type="Script" path="res://FiniteStateMachine.gd" id="3_t2jh3"]
@@ -337,6 +338,7 @@ radius = 102.56
 scale = Vector2(6.18267, 6.18267)
 collision_layer = 2
 collision_mask = 0
+script = ExtResource("1_rdybp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_e7dh7")
