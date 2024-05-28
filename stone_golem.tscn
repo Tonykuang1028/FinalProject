@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=25 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Script" path="res://stone_golem.gd" id="1_rdybp"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://Idle.gd" id="4_ho1mk"]
 [ext_resource type="Script" path="res://Follow.gd" id="5_1awkp"]
 [ext_resource type="Script" path="res://MeeleAttack.gd" id="7_78qej"]
+[ext_resource type="Script" path="res://HomingMissile.gd" id="8_kgbfm"]
+[ext_resource type="PackedScene" uid="uid://dk264ms146u5v" path="res://bulleted.tscn" id="9_aahki"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -433,7 +435,8 @@ script = ExtResource("5_1awkp")
 script = ExtResource("7_78qej")
 
 [node name="HomingMissile" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("3_nieqw")
+script = ExtResource("8_kgbfm")
+bulleted_node = ExtResource("9_aahki")
 
 [node name="LaserBeam" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("3_nieqw")
