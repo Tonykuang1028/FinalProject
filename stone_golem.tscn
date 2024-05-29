@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Script" path="res://stone_golem.gd" id="1_rdybp"]
 [ext_resource type="Texture2D" uid="uid://lcv4ecnfastf" path="res://Mecha-stone Golem 0.1/weapon PNG/Laser_sheet.png" id="2_ifvkb"]
-[ext_resource type="Script" path="res://state.gd" id="3_nieqw"]
 [ext_resource type="Script" path="res://FiniteStateMachine.gd" id="3_t2jh3"]
 [ext_resource type="Script" path="res://Idle.gd" id="4_ho1mk"]
 [ext_resource type="Script" path="res://Follow.gd" id="5_1awkp"]
@@ -13,6 +12,7 @@
 [ext_resource type="Script" path="res://LaserBeam.gd" id="10_3201m"]
 [ext_resource type="Script" path="res://Dash.gd" id="11_fqcgd"]
 [ext_resource type="Script" path="res://ArmorBuff.gd" id="11_q5wnj"]
+[ext_resource type="Script" path="res://Death.gd" id="13_0ahyf"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -125,6 +125,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
 
 [sub_resource type="Animation" id="Animation_gu642"]
 resource_name = "death"
@@ -141,18 +155,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("pivot/Sprite2D:frame")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_ls2ql"]
@@ -466,6 +468,6 @@ script = ExtResource("11_q5wnj")
 script = ExtResource("11_fqcgd")
 
 [node name="Death" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("3_nieqw")
+script = ExtResource("13_0ahyf")
 
 [connection signal="body_entered" from="PlayerDetection" to="FiniteStateMachine/Idle" method="_on_player_detection_body_entered"]
