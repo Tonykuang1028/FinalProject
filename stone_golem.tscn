@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cxy3muh5gu3by"]
+[gd_scene load_steps=28 format=3 uid="uid://cxy3muh5gu3by"]
 
 [ext_resource type="Texture2D" uid="uid://bit43awapc8of" path="res://Mecha-stone Golem 0.1/PNG sheet/Character_sheet.png" id="1_e7dh7"]
 [ext_resource type="Script" path="res://stone_golem.gd" id="1_rdybp"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://dk264ms146u5v" path="res://bulleted.tscn" id="9_aahki"]
 [ext_resource type="Script" path="res://LaserBeam.gd" id="10_3201m"]
 [ext_resource type="Script" path="res://Dash.gd" id="11_fqcgd"]
+[ext_resource type="Script" path="res://ArmorBuff.gd" id="11_q5wnj"]
 
 [sub_resource type="Animation" id="Animation_igvx2"]
 length = 0.001
@@ -458,7 +459,7 @@ bulleted_node = ExtResource("9_aahki")
 script = ExtResource("10_3201m")
 
 [node name="ArmorBuff" type="Node2D" parent="FiniteStateMachine"]
-script = ExtResource("3_nieqw")
+script = ExtResource("11_q5wnj")
 
 [node name="Dash" type="Node2D" parent="FiniteStateMachine"]
 script = ExtResource("11_fqcgd")
