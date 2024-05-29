@@ -1,5 +1,6 @@
 extends Area2D
 
+var travelled_distance = 0
 
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var player = get_parent().find_child("Player")
@@ -9,6 +10,16 @@ var acceleration: Vector2 = Vector2.ZERO
 var velocity: Vector2 = Vector2.ZERO
 
 func _physics_process(delta):
+	
+	const SPEED = 400
+	const RANGE = 1200
+	
+	var direction = Vector2.RIGHT.rotated(rotation)
+	position += direction * SPEED * delta
+	
+	travelled_distance += SPEED * delta
+	if travelled_distance > RANGE :
+		queue_free()
 	
 	acceleration = (player.position - position).normalized() * 900
 	
