@@ -38,3 +38,9 @@ func _physics_process(delta):
 		#shoot()
 			
 	
+func take_damage(amount):
+	health -= amount
+	%ProgressBar.value = health
+	
+
+

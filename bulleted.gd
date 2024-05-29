@@ -39,3 +39,10 @@ func _on_body_entered(_body):
 	var smoke = SMOKE_SCENE.instantiate()
 	get_parent().add_child(smoke)
 	smoke.global_position = global_position
+	
+	if _body is CharacterBody2D:
+		_body.take_damage(20)
+	
+
+
+

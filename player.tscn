@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://be2yma1l3fq8"]
+[gd_scene load_steps=9 format=3 uid="uid://be2yma1l3fq8"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_i6n6t"]
 [ext_resource type="Script" path="res://player.gd" id="1_p0vna"]
@@ -23,6 +23,9 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b2mbx"]
+size = Vector2(82, 100)
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(0, 2)
@@ -63,3 +66,10 @@ theme_override_styles/background = SubResource("StyleBoxFlat_3316x")
 theme_override_styles/fill = SubResource("StyleBoxFlat_s46gn")
 value = 100.0
 show_percentage = false
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3, -42)
+shape = SubResource("RectangleShape2D_b2mbx")
+debug_color = Color(0.711193, 0.336706, 0.879007, 0.42)
