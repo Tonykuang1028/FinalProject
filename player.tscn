@@ -5,10 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cuve5o1iq0cyi" path="res://gun.tscn" id="3_8wt0r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_im2kr"]
-radius = 29.0172
+radius = 43.0116
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v11ta"]
-radius = 38.0132
+radius = 53.0377
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3316x"]
 bg_color = Color(0.74902, 0, 0.192157, 1)
@@ -25,17 +25,18 @@ corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
 [node name="Player" type="CharacterBody2D"]
+position = Vector2(0, 2)
 script = ExtResource("1_p0vna")
 
 [node name="HappyBoo" parent="." instance=ExtResource("1_i6n6t")]
 unique_name_in_owner = true
-position = Vector2(-2, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, 1)
+position = Vector2(-3, -32)
 shape = SubResource("CircleShape2D_im2kr")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-4, -25)
 
 [node name="Gun" parent="." instance=ExtResource("3_8wt0r")]
 visible = false
@@ -44,11 +45,12 @@ rotation = 0.00352106
 
 [node name="HurtBox" type="Area2D" parent="."]
 unique_name_in_owner = true
+position = Vector2(-4, -25)
 collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-position = Vector2(-2, 1)
+position = Vector2(1, -8)
 shape = SubResource("CircleShape2D_v11ta")
 debug_color = Color(0.898039, 0.282353, 0.368627, 0.419608)
 

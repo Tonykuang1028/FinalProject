@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://btn6rqffudpog"]
+[gd_scene load_steps=4 format=3 uid="uid://btn6rqffudpog"]
 
 [ext_resource type="Script" path="res://survivors_game.gd" id="1_kls5p"]
 [ext_resource type="PackedScene" uid="uid://be2yma1l3fq8" path="res://player.tscn" id="1_so1bh"]
-[ext_resource type="PackedScene" uid="uid://bkt56macggrho" path="res://pine_tree.tscn" id="2_i21pu"]
 
 [sub_resource type="Curve2D" id="Curve2D_wj5uv"]
 _data = {
@@ -33,24 +32,6 @@ curve = SubResource("Curve2D_wj5uv")
 unique_name_in_owner = true
 position = Vector2(-123, -104)
 rotation = 0.000905387
-
-[node name="PineTree" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(263, 890)
-
-[node name="PineTree2" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(1166, 800)
-
-[node name="PineTree3" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(1208, 248)
-
-[node name="PineTree4" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(1441, 511)
-
-[node name="PineTree6" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(214, 391)
-
-[node name="PineTree5" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(708, 284)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.08
@@ -83,12 +64,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 161
 text = "Game Over"
-
-[node name="PineTree7" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(729, 906)
-
-[node name="PineTree8" parent="." instance=ExtResource("2_i21pu")]
-position = Vector2(1712, 888)
 
 [connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

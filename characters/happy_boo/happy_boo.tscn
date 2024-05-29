@@ -581,6 +581,7 @@ _data = {
 }
 
 [node name="HappyBoo" type="Node2D"]
+position = Vector2(0, 1)
 script = ExtResource("1_kg7lb")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
