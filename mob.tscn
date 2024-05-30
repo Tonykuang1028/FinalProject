@@ -20,5 +20,5 @@ shape = SubResource("CircleShape2D_xedj4")
 
 [node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_iyrpn")
-volume_db = 3.25
+volume_db = 1.269
 autoplay = true
