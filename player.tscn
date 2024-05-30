@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://be2yma1l3fq8"]
+[gd_scene load_steps=10 format=3 uid="uid://be2yma1l3fq8"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_i6n6t"]
 [ext_resource type="Script" path="res://player.gd" id="1_p0vna"]
 [ext_resource type="PackedScene" uid="uid://cuve5o1iq0cyi" path="res://gun.tscn" id="3_8wt0r"]
+[ext_resource type="AudioStream" uid="uid://dewtj46nh12qq" path="res://dark-souls-vordt-theme-but-good-part-made-with-Voicemod.mp3" id="4_5jl1y"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_im2kr"]
 radius = 43.0116
@@ -73,3 +74,7 @@ show_percentage = false
 position = Vector2(-3, -42)
 shape = SubResource("RectangleShape2D_b2mbx")
 debug_color = Color(0.711193, 0.336706, 0.879007, 0.42)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5jl1y")
+autoplay = true
