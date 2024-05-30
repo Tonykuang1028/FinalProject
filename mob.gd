@@ -3,6 +3,7 @@ extends CharacterBody2D
 var health = 1
 
 @onready var player = get_node("/root/Game/Player")
+@onready var death_sound = $DeathSound
 
 
 func _ready(): 
@@ -18,6 +19,7 @@ func take_damage():
 	%Slime.play_hurt()
 	
 	if health == 0:
+		$DeathSound.play()
 		queue_free()
 	
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")

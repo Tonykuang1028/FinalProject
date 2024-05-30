@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://qdvxicsbgug"]
+[gd_scene load_steps=5 format=3 uid="uid://qdvxicsbgug"]
 
 [ext_resource type="Script" path="res://mob.gd" id="1_hmuao"]
 [ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://characters/slime/slime.tscn" id="1_solbf"]
+[ext_resource type="AudioStream" uid="uid://d1rqtdt0o2mqx" path="res://roblox-death-sound_1.mp3" id="3_iyrpn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xedj4"]
 radius = 52.0096
@@ -16,3 +17,8 @@ unique_name_in_owner = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -27)
 shape = SubResource("CircleShape2D_xedj4")
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_iyrpn")
+volume_db = 3.25
+autoplay = true
