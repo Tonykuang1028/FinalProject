@@ -405,6 +405,7 @@ layout_mode = 0
 offset_left = 2.0
 offset_top = -42.0
 offset_right = 376.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "STONE GOLEM"
 
@@ -425,6 +426,7 @@ theme_override_font_sizes/font_size = 100
 text = "BOSS SLAINED"
 
 [node name="debug" type="Label" parent="."]
+visible = false
 offset_left = -11.4837
 offset_top = -44.4792
 offset_right = 28.5163
