@@ -649,4 +649,3 @@ offset = Vector2(0, -23)
 [node name="SquareFace" type="Sprite2D" parent="Colorizer/SquareBody"]
 position = Vector2(0, -17)
 texture = ExtResource("7_h5h8s")
-metadata/_edit_lock_ = true
